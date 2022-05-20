@@ -98,7 +98,7 @@ const listPopularMovies = (movies) => {
     for (const movie in movies) {
 
         let div = document.createElement("div");
-        div.classList.add("col-4", "mt-4");
+        div.classList.add("col-3", "mt-4");
 
         let card = document.createElement("div");
         card.classList.add("card");
@@ -125,7 +125,8 @@ const listPopularMovies = (movies) => {
 
         let img = document.createElement("img");
         img.classList.add("card-img-top","img-thumbnail");
-        img.setAttribute("src", "http://image.tmdb.org/t/p/w500/" + movies[movie].poster_path);
+        img.setAttribute("src", "http://image.tmdb.org/t/p/w300/" + movies[movie].poster_path);
+        img.setAttribute("loading", "lazy");
        
 
         let cardBody = document.createElement("div");
